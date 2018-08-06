@@ -1,0 +1,94 @@
+<ion-view view-title="PLANS - NEW EXERCISE">
+  <ion-content class="padding">
+      
+    <h1>EXERCISE PLAN #{{exerciseNo}}</h1>
+      <div style="border:2px solid #C0B3A0;border-radius:5px;padding:10px;">
+      <h1>STOPWATCH</h1>
+            <h2 id="stopwatch"><time>00:00:00</time></h2>
+
+            <div class="button-bar bar-energized">
+            <a class="button" id="start" ng-click="start()">START</a>
+            <a class="button" id="stop" ng-click="stop()">STOP</a>
+            <a class="button" id="clear" ng-click="reset()">RESET</a>
+            </div>          
+      </div>
+      
+      <br><br>
+      
+        <div class="row" style="background-color:#E14658;margin:auto;">
+            <div class="col col-center">
+            <h4 style="color:white;text-align: center;">
+                <strong>STEP</strong>
+            </h4>              
+            </div>
+            <div class="col">
+            <h4 style="color:white;text-align: center;" >
+                <strong>DURATION (HH:MM:SS)</strong>
+            </h4>              
+            </div>            
+        </div>
+      
+<!--
+      <div class="row">
+            <div class="col">
+            <h4 ng-repeat="x in thisExerciseFormatted">
+                {{x.secs | date:"HH:mm:ss"}}
+            </h4>              
+            </div>
+            <div class="col">
+            <h4 ng-repeat="x in thisExerciseFormatted">
+                {{x.step}}
+            </h4>              
+            </div>            
+        </div>
+-->
+
+<!--
+      <div class="row" ng-repeat="x in thisExerciseFormatted">
+            <div class="col">
+            <h4>
+                {{x.secs | date:"HH:mm:ss"}}
+            </h4>              
+            </div>
+            <div class="col">
+            <h4>
+                {{x.step}}
+            </h4>              
+            </div>
+      </div>
+-->
+    <ion-list>
+      <ion-item ng-repeat="x in thisExerciseFormatted" style="padding:0px;">
+          <div class="row">
+                      <div class="col">
+            <h4 style="font-size:24px;">
+                {{x.step}}
+            </h4>              
+            </div>
+            <div class="col">
+            <h4 style="font-size:24px;">
+                {{x.secs | date:"HH:mm:ss"}}
+            </h4>              
+            </div>
+          </div>
+<!--          <div class="row">-->
+            <label class = "item-input">
+                <input type = "text" ng-model="x.comments" placeholder = "Comment" />
+            </label>
+<!--          </div>-->
+      </ion-item>
+    </ion-list>
+
+      <br><br>
+      
+      <button class="button button-block button-assertive" style="width:75%; margin:auto;" ng-click="submitPlan(thisExerciseFormatted)">
+          <strong>PLAN COMPLETE</strong>
+      </button>
+      <br>
+      
+  </ion-content>
+        <a class="item" href="#/tabs/plans/help">
+            <i class="float-left icon ion-help-circled"></i>
+        </a>
+<!--            <i class="float-right icon ion-ios-timer" ng-click="modal.show()"></i>-->
+</ion-view>

@@ -1,0 +1,79 @@
+<ion-view view-title="PLANS - HOME">
+  <ion-content class="padding">
+      <h2 style="text-align:center;">GRADUAL DEPATURE</h2>
+      <h3 style="text-align:center;">EXERCISE PLANS</h3>
+    
+      <br>
+      
+      <div style="border:2px solid #C0B3A0;border-radius:5px;padding:3px;">
+        <h4>LAST TARGET DURATION {{showText}}</h4>
+        <div style="background-color:#E14658;width:40%;margin:auto;"> 
+        <h3 style="color:white">{{lastDuration | date: "HH:mm:ss"}}</h3>
+      </div>
+          
+      <br>
+          <div ng-show="showLastActual == true">
+        <h4>LAST ACTUAL DURATION</h4>
+      <div style="background-color:#E14658;width:40%;margin:auto;">
+        <h3 style="color:white">{{lastActualDuration}}</h3>
+      </div> 
+              <br>
+          </div>
+          
+          
+          
+      <h4>YOUR NEW TARGET DURATION</h4>
+      <div style="background-color:#E14658;width:40%;margin:auto;">
+        <h3 style="color:white">{{nextDuration | date: "HH:mm:ss"}}</h3>
+      </div>          
+      </div>
+      
+      <br>
+        <a class="button button-block button-assertive" style="width:75%; margin:auto;" 
+         href="#/tabs/plans/exercise/new"><strong>GENERATE NEW PLAN</strong></a>
+      <br>
+      
+        <hr>    
+      <br>
+      
+      <div style="border:2px solid #C0B3A0;border-radius:5px;padding:3px;">
+      <h4>Would you like to try a Custom Duration instead?</h4> 
+          <div class="row" style="padding:0px;">
+              <div class="col"></div>
+            <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="hours" style="padding-left:24px;">
+                      <input placeholder="HH" type="number" ng-model="custom.hours" ng-value="timeInitial" min="0" style="text-align:center;">
+                  </label>
+              </div>
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="minutes" style="padding-left:24px;">
+                      <input placeholder="MM" type="number" ng-model="custom.minutes" ng-value="timeInitial" min="0" max="60" style="text-align:center;">
+                  </label>
+              </div>
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="seconds" style="padding-left:24px;">
+                      <input placeholder="SS" type="number" ng-model="custom.seconds" ng-value="timeInitial" min="0" max="60" style="text-align:center;">
+                  </label>
+              </div>
+              <div class="col"></div>
+          </div>   
+          
+      <br>
+          
+        <li class="item item-checkbox checkbox-energized" style="border-width:0px;text-align:center;border-top-wdith:1px;">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="custom.checked">
+            </label>
+            USE CUSTOM DURATION
+        </li>      
+      </div>
+      
+      <br>      
+      
+      <a class="button button-block button-assertive" style="width:75%; margin:auto;" ng-click="customDuration(custom)"><strong>GENERATE CUSTOM PLAN</strong></a>
+      
+  </ion-content>
+        <a class="item" href="#/tabs/plans/help">
+            <i class="float-left icon ion-help-circled"></i>
+        </a>      
+</ion-view>

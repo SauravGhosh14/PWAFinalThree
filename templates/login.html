@@ -1,0 +1,23 @@
+      <ion-view view-title="LOGIN">
+        <ion-content class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="text" ng-model="user.email">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+          </div>
+          <div class="padding">
+              <br>
+            <button class="button button-block button-assertive" style="width:75%; margin:auto;" ng-click="login(user)">
+              Login
+            </button>
+              <br>
+              <a class="button button-block button-energized" style="width:75%; margin:auto;" href="#/app/login/{{user.email}}">Forgot Password</a>
+          </div>
+        </ion-content>
+      </ion-view>
+//href="#/app/playlists/{{playlist.id}}"

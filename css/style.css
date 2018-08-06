@@ -1,0 +1,263 @@
+/*
+font-family: 'Fugaz One', cursive;*/
+
+body {
+	font-family: 'Ubuntu',"-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.myFont {
+	font-family: 'Ubuntu',"-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.myFontFugaz {
+	font-family: 'Fugaz One', cursive;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: 'Ubuntu',"-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Ubuntu',"-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+    text-align: center;
+}
+
+.tab-item {
+  font-family: 'Ubuntu',"-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+img {
+	width: 80%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+}
+.fixedBottom {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+.centerAlign {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 90%;
+	height: 200px;
+	/*
+  background-color: #ccc;
+  border-radius: 3px;
+*/
+}
+
+.float-left {
+  border-radius: 50%;
+  width: 30px;
+  color: #E14658;
+  padding: 30px;
+  font-size: 60px;
+  position: fixed;
+  bottom: 25px; /* Adjust to where you want it */
+  left: -10px;; /* Adjust to where you want it */
+  z-index: 1;
+}
+
+.float-right {
+  border-radius: 50%;
+  width: 30px;
+  color: #E14658;
+  padding: 30px;
+  font-size: 60px;
+  position: fixed;
+  bottom: 25px; /* Adjust to where you want it */
+  right: 40px;; /* Adjust to where you want it */
+  z-index: 1;
+}
+
+.button-bar >.button {
+    font-size: 16px;
+    padding: 0px;
+    font-family: 'Ubuntu',"-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.item-divider {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-height: 30px;
+    background-color: #E14658;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+/*
+.item.item-stable {
+    border-color: #b2b2b2;
+    background-color: #872a34;
+    color: #fff;
+}
+*/
+
+p {
+    text-align: justify;
+}
+
+.item {
+    text-overflow: inherit;
+    white-space: normal;
+}
+
+
+/*
+ * Credits to https://forum.ionicframework.com/t/actionsheets-android-ugly-styling-need-help/18462/12
+ */
+
+.platform-android .action-sheet-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.platform-android .action-sheet {
+  align-content: center;
+  margin: auto;
+  max-width: 96vw;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+  text-align: center;
+  font-size: 16px;
+  color: inherit;
+}
+.platform-android .action-sheet .action-sheet-title {
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #666;
+}
+.platform-android .action-sheet .button {
+  border-color: #e2e2e2;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #104e89;
+}
+.platform-android .action-sheet .button.destructive {
+  color: red;
+}
+.platform-android .action-sheet .button.active, .platform-android .action-sheet .button.activated {
+  background: #e8e8e8;
+}
+.platform-android .action-sheet-group {
+  border-radius: 1;
+  background-color: #fafafa;
+}
+.platform-android .action-sheet-cancel {
+  display: none;
+}
+.platform-android .action-sheet-has-icons .button {
+  padding-left: 56px;
+}
+
+
+/*STOPWATCH*/
+/*
+#start {
+  margin: 40px auto;
+  text-align: center;
+  color: #fff;
+  background: #48633B;
+  border-radius:5px;
+}
+
+#stop {
+  margin: 40px 5px auto;
+  text-align: center;
+  color: #DAD6D6;
+  background: #721329;
+  border:solid 2px #590F20;
+  border-radius:5px;
+  padding:16px 40px 16px;
+  letter-spacing: 2px;
+  cursor:pointer;
+}
+
+#clear {
+  margin: 40px auto;
+  text-align: center;
+  color: #DAD6D6;
+  background: #564E58;
+  border:solid 2px #3E383F;
+  border-radius:5px;
+  padding:16px 40px 16px;
+  letter-spacing: 2px;
+  cursor:pointer;
+}
+*/
+
+
+
+
+/*
+.pagecenter {
+  height: 65vh;
+  border: 3px solid green;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.pagecenter h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+*/
+
+/*
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  background-color: DodgerBlue;
+}
+
+.flex-container>div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 100px;
+  height: 100px;
+}
+*/

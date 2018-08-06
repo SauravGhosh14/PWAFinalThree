@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="theme-color" content="#3F324F"/>
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+<!--     un-comment this code to enable service worker-->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Ubuntu" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+<!--    <script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+<!--    <script src="js/idb.js"></script>     -->
+    <script src="js/app.js"></script> 
+    <script src="js/controllers.js"></script>
+      
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Sub Threshold PWA">
+  <link rel="apple-touch-icon" href="icon.png">      
+      
+  <meta name="msapplication-TileImage" content="icon.png">
+  <meta name="msapplication-TileColor" content="#3F324F">      
+  </head>
+    
+  <body ng-app="starter">
+      <ion-nav-view></ion-nav-view>
+  </body>
+    <!-- Firebase & jQuery & Moment -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>    -->
+    <script src="js/Chart.min.js"></script>
+    <script src="js/angular-chart.min.js"></script>
+    
+</html>
+
+<!--Assertive - Primary Color #3F324F
+Also Switched Border Color #C0B3A0
+Energized - #E14658
+Border Color for Ener #21242C
+-->

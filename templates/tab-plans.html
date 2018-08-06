@@ -1,0 +1,76 @@
+<ion-view view-title="PLANS" hide-back-button="true">
+  <ion-content class="padding">
+<!--
+      <div>
+        <img alt="Sub Threshold Logo" src="img/Logo%20A.png">
+      </div>
+-->
+      <br>         
+      <a class="button button-block button-assertive" style="width:75%; margin:auto;" href="#/tabs/plans/exercise/home"><strong>NEW EXERCISE</strong></a>      
+      <br>
+<!--
+      {{plansNotes}}
+      {{plansInfo}}
+-->
+      
+      <div ng-repeat="group in plansNotes">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              Exercise No #{{group.exerciseNo}}
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown(group)">
+              <strong>Date:</strong> {{group.formattedDate}}<br>
+              <strong>Exercise Duration:</strong> {{group.thisExerciseDuration}}<br>
+<!--              <strong>Most Comfortable Duration:</strong> {{group.duration}}<br>-->
+              <strong>How did the Dog do?</strong> {{group.finalDogDo}}<br>
+              <strong>Notes:</strong> {{group.notes}}
+<!--              {{plansInfo[group.id-1]}}-->
+              <br>
+        <ion-list>
+                <div class="row" style="background-color:#E14658;margin:auto;">
+            <div class="col col-center">
+            <h6 style="color:white;text-align: center;">
+                <strong>STEP</strong>
+            </h6>              
+            </div>
+            <div class="col">
+            <h6 style="color:white;text-align: center;" >
+                <strong>DURATION (HH:MM:SS)</strong>
+            </h6>              
+            </div>            
+        </div>
+      <ion-item ng-repeat="z in plansInfo[group.id-1]" style="padding:0px;" ng-if="z.step > 0">
+          <div class="row" style="padding-top:0px;padding-bottom:0px;">
+                      <div class="col">
+            <h6 style="font-size:12px;">
+                {{z.step}}
+            </h6>              
+            </div>
+            <div class="col">
+            <h6 style="font-size:12px;">
+                {{z.secs | date:"HH:mm:ss"}}
+            </h6>              
+            </div>
+          </div>
+          <p style="padding-left:10px;padding-right:10px;font-size:12px;text-align:justify;">{{z.comments}}</p>
+      </ion-item>
+    </ion-list>              
+          </ion-item>          
+      </div>
+      
+<!--
+      <br>
+      
+      <div ng-repeat="z in plansInfo">
+          <ion-item class="item-stable">
+              {{z.id}}
+          </ion-item>
+      </div>      
+-->
+      
+  </ion-content>
+        <a class="item" href="#/tabs/plans/help">
+            <i class="float-left icon ion-help-circled"></i>
+        </a>      
+</ion-view>

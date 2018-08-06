@@ -1,0 +1,102 @@
+<ion-view view-title="DASHBOARD" hide-back-button="true">
+  <ion-content class="padding">
+      <div>
+        <img alt="Sub Threshold Logo" src="img/Logo%20A.png">
+      </div>
+      <div ng-show="showDash == true">
+    <div class="card">
+        <div class="item item-divider" style="background-color:#3F324F">
+            HOW OFTEN HAVE YOU TRAINED?
+        </div>
+        <div class="item item-text-wrap" style="padding:10px;">
+            <div class="row" style="padding:0px;">
+                <div class="col" style="text-align:center;">
+                    <h2>LAST 7 DAYS</h2>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <h2>LAST 30 DAYS</h2>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <h2>TOTAL</h2>
+                </div>                
+            </div>
+            <div class="row" style="padding:0px;">
+                <div class="col" style="text-align:center;">
+                    {{lastSeven}}
+                </div>
+                <div class="col" style="text-align:center;">
+                    {{lastThirty}}
+                </div>
+                <div class="col" style="text-align:center;">
+                    {{totalSessions}}
+                </div>                
+            </div>            
+        </div>
+    </div>
+      
+    <div class="card">
+        <div class="item item-divider" style="background-color:#3F324F">
+            YOUR INCREASE IN DURATION
+        </div>
+        <div class="item item-text-wrap" style="padding:10px;">
+            <div class="row" style="padding:0px;">
+                <div class="col" style="text-align:center;">
+                    <h2>FIRST DURATION</h2>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <h2>LAST DURATION</h2>
+                </div>              
+            </div>
+            <div class="row" style="padding:0px;">
+                <div class="col" style="text-align:center;">
+                    {{firstDuration}}
+                </div>
+                <div class="col" style="text-align:center;">
+                    {{lastDuration}}
+                </div>              
+            </div>              
+        </div>
+    </div>
+      
+    <div class="card">
+        <div class="item item-divider" style="background-color:#3F324F">
+            STEPS &amp; DURATIONS IN TOTAL
+        </div>
+        <div class="item item-text-wrap" style="padding:10px;">
+            <div class="row" style="padding:0px;">
+                <div class="col" style="text-align:center;">
+                    <h2>TOTAL STEPS</h2>
+                </div>
+                <div class="col" style="text-align:center;">
+                    <h2>TOTAL DURATION</h2>
+                </div>              
+            </div>
+            <div class="row" style="padding:0px;">
+                <div class="col" style="text-align:center;">
+                    {{totalSteps}}
+                </div>
+                <div class="col" style="text-align:center;">
+                    {{totalDuration}}
+                </div>              
+            </div>              
+        </div>
+    </div>      
+      
+    <div class="card">
+        <div class="item item-divider" style="background-color:#3F324F">
+            HOW DID YOUR DOG DO?
+        </div>
+        <div class="item item-text-wrap">
+            <canvas id="bar" class="chart chart-bar" data="data" labels="labels" series="series" options="{showTooltips: false}"></canvas>
+        </div>
+    </div>          
+      </div>
+      <div ng-show="showDash == false" style="text-align:center;padding-left:30px;padding-right:30px;">
+          <br>
+          <h2>Welcome to the Separation Anxiety App!</h2>
+          <br>
+          <h4>Get your Custom Training Plans, Track Exercises and Review Progress - All in One Place</h4>
+          <img alt="Welcome" src="img/welcome.jpg">
+      </div>
+  </ion-content>    
+</ion-view>

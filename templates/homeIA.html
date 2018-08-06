@@ -1,0 +1,78 @@
+<ion-view view-title="INITIAL ASSESSMENT">
+  <ion-content class="padding">
+<!--
+      <div>
+        <img alt="Sub Threshold Logo" src="../img/Logo%20A.png">
+      </div>
+      <br><br>
+      <h2 style="text-align: center;font-weight: 400;">INITIAL ASSESSMENT</h2>
+      <br><br>
+-->
+<!--
+    <form id="IAOne" class="list">
+      <ion-list id="partOne">
+        <label class="item item-input" id="yourName">
+          <span class="input-label">Your Name</span>
+          <input type="text" placeholder="Name" ng-model="ia.name">
+        </label>
+      </ion-list>
+    </form>
+-->
+    <form id="IATwo" class="list">
+      <ion-list id="partTwo">
+        <label class="item item-input" id="dogName">
+          <span class="input-label">Dog's Name</span>
+          <input type="text" placeholder="Dog's Name" ng-model="ia.dogName">
+        </label>
+        <label class="item item-input" id="age">
+          <span class="input-label">Age</span>
+          <input type="number" placeholder="Age" ng-model="ia.age" min="0">
+        </label>
+        <label class="item item-input" id="breed">
+          <span class="input-label">Breed</span>
+          <input type="text" placeholder="Breed" ng-model="ia.breed">
+        </label>
+        <label class="item item-select" id="gender">
+          <span class="input-label">Gender</span>
+          <select ng-model="ia.gender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </label>
+        <label class="item item-select" id="neutered">
+          <span class="input-label">Neutered</span>
+          <select ng-model="ia.neutered">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+      </ion-list>
+    </form>
+    <form id="IAThree" class="list">
+      <ion-list id="partThree">
+          <div class="row" style="padding:0px;">
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="minutes">
+                      <span class="input-label">Minutes</span> 
+                      <input placeholder="Minutes" type="number" ng-model="ia.minutes" min="0">
+                  </label>
+              </div>   
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="seconds">
+                      <span class="input-label">Seconds</span> 
+                      <input placeholder="Seconds" type="number" ng-model="ia.seconds" min="0" max="60">
+                  </label>
+              </div>
+          </div>
+        <label class="item item-input" id="date">
+          <span class="input-label">Date</span>
+          <input type="date" placeholder="" ng-model="ia.date">
+        </label>
+      </ion-list>
+    </form>
+      <button class="button button-block button-assertive" style="width:50%; margin:auto;" ng-click="submitIA(ia,iaInfoToGS)">
+              Submit
+     </button>      
+  </ion-content>
+</ion-view>
+

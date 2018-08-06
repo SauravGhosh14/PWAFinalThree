@@ -1,0 +1,37 @@
+<ion-view view-title="CUE LIST">
+  <ion-content class="padding">
+      
+      <h2>STEP TWO</h2>
+      <p>
+          Now, go through your list and say if, “Okay, if I were doing a practice departure which of these pre-departure cues could I not avoid? Which of them are absolutely unavoidable?”<br /><br />
+          Let me give you an example. If you're in Canada, it’s December, your boots are by the door, and you've got three feet of snow outside the door, then I'm going to suggest boots are essential.There's nothing you can do unless you are brave enough to step outside in your socks.<br /><br />
+          So anything like this that’s absolutely essential to you getting out, put in column two.<br /><br />
+          Now ask the question “What do I NOT absolutely, desperately have to do?” Maybe you don't have to put on a hat. Perhaps you don't have to pick up a bag, at least not when you do the practice departure.<br /><br />
+          So anything that's absolutely essential to you getting out, toggle the button to "unavoidable".<br /><br />
+          Separate out the cues into avoidable and unavoidable.<br /><br />
+      </p>
+      
+      <div class="item item-divider"> 
+        AVOIDABLE / UNAVOIDABLE
+      </div>
+      <ion-toggle ng-model="avoidable" ng-checked="false" ng-disabled="true" toggle-class="toggle-energized">
+        If the cue is <strong>AVOIDABLE</strong>, leave the sliding button like this
+      </ion-toggle>
+      <ion-toggle toggle-class="toggle-energized"ng-model="unavoidable" ng-checked="true" ng-disabled="true">
+        If the cue is <strong>UNAVOIDABLE</strong>, leave the sliding button like this
+      </ion-toggle> 
+      
+      <br>
+      
+      <div class="item item-divider">
+        Make Your Choices
+      </div>
+      <ion-toggle ng-repeat="item in originalCueList | filter: {checked: 'true'}" ng-model="item.show" ng-checked="item.show" toggle-class="toggle-energized" style="white-space:normal;">
+      {{item.text}}
+      </ion-toggle>
+      <br>
+      
+      <a class="button button-assertive button-block" style="width:75%; margin:auto;" ng-click="saveListTwo()"><strong>SAVE</strong></a>
+<!--      <a class="button button-assertive button-block" href="#/tabs/pdq" style="width:75%; margin:auto;" ng-click="saveListTwo()"><strong>SAVE</strong></a>-->
+  </ion-content>  
+</ion-view>

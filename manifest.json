@@ -1,0 +1,15 @@
+{
+  "name": "Sub Threshold",
+  "short_name": "Sub Threshold",
+  "start_url": "index.html",
+  "display": "standalone",
+    "background_color": "#3F324F",
+    "orientation": "portrait",
+    "theme_color": "#3F324F",    
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
+//3F324F

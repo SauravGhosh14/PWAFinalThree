@@ -1,0 +1,49 @@
+<ion-view view-title="NEW SESSION">
+  <ion-content class="padding">
+      <h3 style="text-align:center;">NEW SESSION</h3>  
+      <h4 style="text-align:center;">YOUR TEXT &#38 IMAGES GO HERE</h4>
+    <form id="newSessionForm" class="list">
+      <ion-list id="newSessionList">
+        <label class="item item-input" id="date">
+          <span class="input-label"><strong>Date</strong></span>
+          <input type="date" placeholder="" ng-model="session.date">
+        </label>
+          
+<!--
+        <label class="item item-select" id="cue">
+          <span class="input-label">Cue Worked On</span>
+          <select ng-options="item as item.text for item in originalCueList | filter: {checked: 'true',show:'true'}" ng-model="session.cue">
+          </select>
+        </label>          
+-->
+    
+        <label class="item" id="cueTwo">
+            <span class="input-label" style="width:100%;"><strong>Cues worked on</strong></span>
+        </label>
+        <li class="item item-checkbox checkbox-energized" ng-repeat="item in originalCueList | filter: {checked: 'true',show:'true'}">
+        <label class="checkbox">
+        <input type="checkbox" ng-model="checkedItems[item.text]">
+        </label>
+        {{item.text}}
+        </li>
+          
+        <label class="item item-select" id="dogDo">
+          <span class="input-label"><strong>How did the dog do?</strong></span>
+          <select ng-model="session.dogDo">
+            <option>Didn't Notice</option>
+            <option>Noticed but didn't react</option>
+            <option>Was anxious</option>                 
+          </select>
+        </label>
+            <label class="item item-input" id="notes">
+            <span class="input-label"><strong>Notes</strong></span>
+            <textarea placeholder="Notes on Session" style="height:100px;" ng-model="session.notes"></textarea>
+        </label>          
+      </ion-list>
+    </form>
+      <button class="button button-block button-assertive" style="width:90%; margin:auto;" ng-click="saveSession(session,checkedItems)">
+<!--          <button class="button button-block button-assertive" style="width:90%; margin:auto;" ng-click="saveSession(session,sessInfoToGS,checkedItems)">          -->
+          <strong>SAVE SESSION INFORMATION</strong>
+      </button>      
+  </ion-content>  
+</ion-view>

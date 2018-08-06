@@ -1,0 +1,65 @@
+<ion-view view-title="PDQ" hide-back-button="true">
+  <ion-content>
+<!--
+      <div>
+        <img alt="Sub Threshold Logo" src="img/Logo%20A.png">
+      </div>
+      <br>PDQ<br>
+-->
+      <div class="button-bar bar-energized">
+          <a class="button" href="#/tabs/pdq/help">HELP</a>
+          <a class="button" href="#/tabs/pdq/cueList">CUE LIST</a>
+          <a class="button" href="#/tabs/pdq/newSession">NEW SESSION</a>
+        </div>
+<!--
+      <h2 style="text-align:center;">PDQ CONTENT</h2>
+      <h3 style="text-align:center;">YOUR TEXT &#38 IMAGES GO HERE</h3>   
+-->
+      <h2>PRE-DEPARTURE CUES</h2>
+      <div ng-show="showHelp == false" style="text-align:center;padding-left:30px;padding-right:30px;">
+      <h4>Pre-departure cues (PDQ's) are the triggers your dog pays attention to before you leave.</h4>
+      <h4>Sometimes these PDQs will cause anxiety. If so you may need to desensitize you dog to these cues.</h4>
+      <h4>For more information refer back to 
+          <a href="#" onclick="window.open('https://www.subthresholdtraining.com/what-you-need-to-know-about-pre-departure-cues-and-anxiety/', '_system'); return false;">
+              LINK
+          </a>
+      </h4>
+      </div>
+      
+      <img alt="PDQ" src="img/pdq.jpg">
+      <br><br>
+<!--
+      <ion-list>
+        <div ng-repeat="group in compSessions">
+          <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}" style="background-clor:#C0B3A0;">
+            {{group.dateFormatted}}
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown(group)">
+            <strong>Cue Worked On:</strong> {{group.cue}}<br>
+            <strong>How did the Dog do:</strong> {{group.dogDo}}<br>
+            <strong>Session Notes:</strong> {{group.notes}}
+          </ion-item>
+        </div>
+      </ion-list>           
+-->
+				<div ng-repeat="group in compSessions">
+          			<ion-item class="item-stable"
+                    	ng-click="toggleGroup(group)"
+                    	ng-class="{active: isGroupShown(group)}">
+            			{{group.dateFormatted}}
+          			</ion-item>
+                    <ion-item class="item-accordion" ng-show="isGroupShown(group)">
+                    <strong>Cue Worked On:</strong> {{group.cues}}<br>
+                    <strong>How did the Dog do:</strong> {{group.dogDo}}<br>
+                    <strong>Session Notes:</strong> {{group.notes}}
+                    </ion-item>
+       			</div>      
+  </ion-content>
+<!--
+    
+            <a class="item" href="#" onclick="window.open('https://www.subthresholdtraining.com/what-you-need-to-know-about-pre-departure-cues-and-anxiety/', '_system'); return false;">
+                <i class="float-left icon ion-help-circled"></i>
+            </a>    
+            <i class="float-right icon ion-android-add-circle"></i>
+-->
+</ion-view>

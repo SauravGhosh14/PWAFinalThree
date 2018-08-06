@@ -1,0 +1,22 @@
+<ion-view view-title="CUE LIST">
+  <ion-content class="padding">
+      
+      <h2>STEP ONE</h2>
+      <p>
+          The first thing you need to do is an audit of your pre-departure cues.<br /><br />
+          You need to select everything from the list below you do as you get ready to leave the house which makes your dog upset or anxious, or which your dog pays attention to.<br /><br />
+          It doesn't have to be every single thing you do, but it does have to be the things your dog at least pays attention to. The things which your dog uses as tip-offs to you leaving.
+      </p>
+      
+      <div class="item item-divider">
+        Make Your Choices
+      </div>
+      <ion-toggle ng-repeat="item in originalCueList" ng-model="item.checked" ng-checked="item.checked" toggle-class="toggle-energized" style="white-space:normal;">
+      {{item.text}}
+      </ion-toggle>
+      <br>
+      
+      <a class="button button-assertive button-block" href="#/tabs/pdq/cueListTwo" style="width:75%; margin:auto;" ng-click="saveList()"><strong>GO TO STEP 2</strong>
+      </a>
+  </ion-content>  
+</ion-view>

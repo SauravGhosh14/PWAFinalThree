@@ -1,0 +1,101 @@
+<ion-view view-title="PLANS - EXERCISE NOTES">
+  <ion-content class="padding">
+      <h3 style="text-align:center;">RECORD EXERCISE #{{exerciseNo}} DATA</h3>  
+    <form id="newExerciseForm" class="list">
+      <ion-list id="newExerciseList">
+          
+        <label class="item item-input" id="date">
+          <span class="input-label"><strong>Date</strong></span>
+          <input type="date" placeholder="" ng-model="exercise.date">
+        </label>  
+          
+        <ion-item>
+            <div style="text-align:center;"><strong>How did your dog do?</strong></div>
+                 <div class="range">
+                     STRUGGLED
+            <input type="range" min="1" max="3" step="1" ng-model="exercise.dogDo">
+<!--            <input type="range" name="volume" ng-model="exercise.dogDo">-->
+                     ACED IT
+                </div>
+        </ion-item>          
+          
+<!--
+        <ion-item>
+            <div style="text-align:center;"><strong>What duration did you comfortably get?</strong></div>
+            <label class="item item-select" id="duration" style="border-width:0px;">
+                <select ng-model="exercise.duration">  
+                <option ng-repeat="x in thisExerciseFormatted" value='{{x.secs | date:"HH:mm:ss"}}'>STEP {{x.step}} - {{x.secs | date:"HH:mm:ss"}}</option>
+            </select>
+            </label>            
+        </ion-item>      
+-->
+          
+<!--
+        <li class="item item-checkbox checkbox-energized">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="exercise.checked">
+            </label>
+            Check the box if your Dog met the Target Duration!
+        </li>
+-->
+          
+        <label class="item item-select" id="dogDo">
+          <span class="input-label" style="width:50%;text-align:center;"><strong>Did your Dog meet the Target Duration</strong></span>
+          <select ng-model="exercise.checked">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>          
+          
+          <div>
+<!--              <div ng-switch="exercise.checked">-->
+<!--                  <div ng-switch-when="No">-->
+        <div ng-show="exercise.checked=='No'">
+
+        <ion-item style="border-bottom-width:0px;">
+            <div style="text-align:center;">Enter a duration that you dog was comfortable with!</div>
+        </ion-item>  
+          
+          <div class="row" style="padding:0px;">
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="hours" style="padding-left:24px;border-top-style:dashed;">
+                      <input placeholder="HH" type="number" ng-model="next.hours" min="0" style="text-align:center;">
+                  </label>
+              </div>              
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="minutes" style="padding-left:24px;border-top-style:dashed;">
+                      <input placeholder="MM" type="number" ng-model="next.minutes" min="0" max="60" style="text-align:center;">
+                  </label>
+              </div>
+              <div class="col" style="padding:0px;">
+                  <label class="item item-input" id="seconds" style="padding-left:24px;border-top-style:dashed;">
+                      <input placeholder="SS" type="number" ng-model="next.seconds" min="0" max="60" style="text-align:center;">
+                  </label>
+              </div>
+          </div>                  
+              </div>
+          </div>           
+          
+        <label class="item item-input " id="notes">
+            <span class="input-label"><strong>Notes</strong></span>
+            <textarea placeholder="Notes on Exercise" style="height:100px;" ng-model="exercise.notes"></textarea>
+        </label>            
+<!--
+        <label class="item item-select" id="duration">
+          <span class="input-label"><strong>What duration did you comfortably get?</strong></span>
+          <select ng-model="exercise.duration">  
+              <option ng-repeat="x in thisExerciseFormatted" value='{{x.secs | date:"HH:mm:ss"}}'>STEP {{x.step}} - {{x.secs | date:"HH:mm:ss"}}</option>
+          </select>
+        </label>
+        
+        <ion-item class="range range-assertive" id="dogDo"><strong>How did your dog do?</strong>
+          &nbsp;1<input type="range" min="1" max="4" step="1" ng-model="exercise.dogDo">4
+        </ion-item> 
+-->        
+      </ion-list>
+    </form>
+      <button class="button button-block button-assertive" style="width:75%; margin:auto;" ng-click="saveExercise(exercise,next)">
+          <strong>SAVE EXERCISE DATA</strong>
+      </button>      
+  </ion-content>  
+</ion-view>
